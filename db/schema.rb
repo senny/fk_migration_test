@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402074253) do
+ActiveRecord::Schema.define(version: 20150402074709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,4 +32,5 @@ ActiveRecord::Schema.define(version: 20150402074253) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "articles", "authors", name: "articles_author_id_fk", on_delete: :cascade
 end
